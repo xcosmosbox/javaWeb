@@ -7,6 +7,22 @@
     <servlet>
         <servlet-name>studentServlet</servlet-name>
         <servlet-class>com.javaweb.servlet.StudentServlet</servlet-class>
+        <init-param>
+            <param-name>driver</param-name>
+            <param-value>com.mysql.cj.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql://localhost:3306/SRS</param-value>
+        </init-param>
+        <init-param>
+            <param-name>user</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>yfen$otto</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>studentServlet</servlet-name>
