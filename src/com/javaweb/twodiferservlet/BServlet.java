@@ -7,7 +7,7 @@ import java.io.IOException;
 public class BServlet implements Servlet {
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-        
+
     }
 
     @Override
