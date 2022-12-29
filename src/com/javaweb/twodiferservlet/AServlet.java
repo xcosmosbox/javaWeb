@@ -6,11 +6,15 @@ import java.io.IOException;
 
 public class AServlet implements Servlet {
 
-    //
+    //no-params constructor
+    public AServlet()
+    {
+        System.out.println("AServlet no-params constructor running!");
+    }
 
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-
+        System.out.println("AServlet init function running!");
     }
 
     @Override
@@ -20,7 +24,7 @@ public class AServlet implements Servlet {
 
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-
+        System.out.println("AServlet service function running!");
     }
 
     @Override
@@ -30,6 +34,6 @@ public class AServlet implements Servlet {
 
     @Override
     public void destroy() {
-
+        System.out.println("AServlet destroy function running!");
     }
 }
