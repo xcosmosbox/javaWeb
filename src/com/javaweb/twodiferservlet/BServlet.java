@@ -5,9 +5,15 @@ import jakarta.servlet.*;
 import java.io.IOException;
 
 public class BServlet implements Servlet {
+
+    //no-params constructor
+    public BServlet(){
+        System.out.println("BServlet no-params constructor running!");
+    }
+
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-
+        System.out.println("BServlet init function running!");
     }
 
     @Override
@@ -17,7 +23,7 @@ public class BServlet implements Servlet {
 
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-
+        System.out.println("BServlet service function running!");
     }
 
     @Override
@@ -27,6 +33,6 @@ public class BServlet implements Servlet {
 
     @Override
     public void destroy() {
-
+        System.out.println("BServlet destroy function running!");
     }
 }
