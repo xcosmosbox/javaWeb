@@ -7,7 +7,7 @@ import java.io.IOException;
 public abstract class GenericServlet implements Servlet {
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-
+        System.out.println("My servlet configuration: " + servletConfig);
     }
 
     @Override
