@@ -3,7 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    
+
+    <servlet>
+        <servlet-name>viploginServlet</servlet-name>
+        <servlet-class>com.javaweb.adapter.VipLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>viploginServlet</servlet-name>
+        <url-pattern>/vip</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>loginServlet</servlet-name>
         <servlet-class>com.javaweb.adapter.LoginServlet</servlet-class>
