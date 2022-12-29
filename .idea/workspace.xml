@@ -11,7 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/javaweb/twodiferservlet/BServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javaweb/twodiferservlet/BServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javaweb/twodiferservlet/AServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javaweb/twodiferservlet/AServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +171,7 @@
       <updated>1671841730282</updated>
       <workItem from="1671841731499" duration="3074000" />
       <workItem from="1672135803904" duration="1700000" />
-      <workItem from="1672320572504" duration="342000" />
+      <workItem from="1672320572504" duration="672000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
