@@ -5,14 +5,23 @@ import jakarta.servlet.*;
 import java.io.IOException;
 
 public abstract class GenericServlet implements Servlet {
+
+    private ServletConfig config;
+
     @Override
-    public void init(ServletConfig servletConfig) throws ServletException {
+    public final void init(ServletConfig servletConfig) throws ServletException {
         System.out.println("My servlet configuration: " + servletConfig);
+        this.config = servletConfig;
+        this.init();
+    }
+
+    public void init(){
+        //other init contents for myself
     }
 
     @Override
     public ServletConfig getServletConfig() {
-        return null;
+        return config;
     }
 
     @Override
