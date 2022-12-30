@@ -10,6 +10,24 @@
     </context-param>
 
     <servlet>
+        <servlet-name>getServlet</servlet-name>
+        <servlet-class>com.javaweb.httpStudy.GetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getServlet</servlet-name>
+        <url-pattern>/getServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>postServlet</servlet-name>
+        <servlet-class>com.javaweb.httpStudy.PostServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>postServlet</servlet-name>
+        <url-pattern>/postServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>testConfig</servlet-name>
         <servlet-class>com.javaweb.studyservletcontext.ConfigTestServlet</servlet-class>
         <init-param>
