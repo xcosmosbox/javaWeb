@@ -72,6 +72,12 @@ public class ConfigTestServlet extends GenericServlet {
         String contextPath = application.getContextPath();
         out.print(contextPath + "<br>");
 
+        // getting real path for file
+        String realPath = application.getRealPath("/student.html");
+        out.print(realPath + "<br>");
+
+
+
 
 
 
