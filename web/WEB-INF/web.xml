@@ -5,6 +5,19 @@
          version="4.0">
 
     <servlet>
+        <servlet-name>testConfig</servlet-name>
+        <servlet-class>com.javaweb.studyservletcontext.ConfigTestServlet</servlet-class>
+        <init-param>
+            <param-name>driver</param-name>
+            <param-value>com.mysql.cj.jdbc.Driver</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testConfig</servlet-name>
+        <url-pattern>/testConfig</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
         <servlet-name>viploginServlet</servlet-name>
         <servlet-class>com.javaweb.adapter.VipLoginServlet</servlet-class>
     </servlet>
