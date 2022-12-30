@@ -10,10 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/com/javaweb/studyservletcontext/ConfigTestServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/javaweb/adapter/GenericServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javaweb/adapter/GenericServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/javaweb/adapter/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javaweb/adapter/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/javaweb/adapter/VipLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javaweb/adapter/VipLoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +63,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
@@ -78,6 +78,8 @@
     <configuration name="Adapter_Login_TEST" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Adapter_Login_TEST" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="javaWeb:war exploded">
           <settings>
@@ -265,7 +267,8 @@
       <updated>1671841730282</updated>
       <workItem from="1671841731499" duration="3074000" />
       <workItem from="1672135803904" duration="1700000" />
-      <workItem from="1672320572504" duration="3328000" />
+      <workItem from="1672320572504" duration="3497000" />
+      <workItem from="1672365077698" duration="831000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
