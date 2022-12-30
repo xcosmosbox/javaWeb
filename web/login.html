@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>http-login</title>
+</head>
+<body>
+
+// NOTE: The request path is written on the browser with the root path
+<h1>get req:</h1>
+<form action="/httpStudy/getServlet" method="get">
+  username<input type="text" name="username"/><br>
+  password<input type="text" name="password"/><br>
+  <input type="submit" value="login">
+</form>
+
+<h1>post req:</h1>
+<form action="/httpStudy/postServlet" method="post">
+  username<input type="text" name="username"/><br>
+  password<input type="text" name="password"/><br>
+  <input type="submit" value="login">
+</form>
+
+</body>
+</html>
