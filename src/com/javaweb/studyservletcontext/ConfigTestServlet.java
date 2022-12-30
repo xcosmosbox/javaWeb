@@ -68,6 +68,11 @@ public class ConfigTestServlet extends GenericServlet {
             out.print(name + "=" + value + "<br>");
         }
 
+        // getting context path
+        String contextPath = application.getContextPath();
+        out.print(contextPath + "<br>");
+
+
 
 
     }
