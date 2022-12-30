@@ -77,7 +77,7 @@ public class ConfigTestServlet extends GenericServlet {
         out.print(realPath + "<br>");
 
         // log
-        // CATALINA_HOME/logs 
+        // CATALINA_HOME/logs
         application.log("Test log!");
 
 
