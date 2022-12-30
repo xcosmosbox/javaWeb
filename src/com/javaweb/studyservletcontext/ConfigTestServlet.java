@@ -60,6 +60,14 @@ public class ConfigTestServlet extends GenericServlet {
         application = this.getServletContext();
         out.print("<br>" + application);
 
+        // getting context params
+        Enumeration<String> initParamNames = application.getInitParameterNames();
+        while (initParamNames.hasMoreElements()){
+            String name = initParamNames.nextElement();
+            String value = application.getInitParameter(name);
+            out.print(name + "=" + value + "<br>");
+        }
+
 
 
     }
