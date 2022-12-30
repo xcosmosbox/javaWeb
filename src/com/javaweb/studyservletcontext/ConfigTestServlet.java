@@ -52,6 +52,15 @@ public class ConfigTestServlet extends GenericServlet {
         String driver = config.getInitParameter("driver");
         out.print(driver);
 
+        // two different method to get ServletContext obj
+        // 1. getting ServletContext obj through ServletConfig obj
+        ServletContext application = config.getServletContext();
+        out.print("<br>" + application);
+        // 2. using `this` keyword to call 'getServletContext()' method
+        application = this.getServletContext();
+        out.print("<br>" + application);
+
+
 
     }
 }
