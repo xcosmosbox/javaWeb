@@ -80,6 +80,9 @@ public class ConfigTestServlet extends GenericServlet {
         // CATALINA_HOME/logs
         application.log("Test log!");
 
+        //store data into tomcat application domain
+        application.setAttribute("user", new User("otto","123"));
+
 
 
 
