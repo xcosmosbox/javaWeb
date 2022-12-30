@@ -76,6 +76,10 @@ public class ConfigTestServlet extends GenericServlet {
         String realPath = application.getRealPath("/student.html");
         out.print(realPath + "<br>");
 
+        // log
+        // CATALINA_HOME/logs 
+        application.log("Test log!");
+
 
 
 
