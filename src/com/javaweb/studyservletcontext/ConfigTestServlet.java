@@ -83,6 +83,10 @@ public class ConfigTestServlet extends GenericServlet {
         //store data into tomcat application domain
         application.setAttribute("user", new User("otto","123"));
 
+        // get user data
+        Object userObj = application.getAttribute("user");
+        // display
+        out.print(userObj + "<br>");
 
 
 
