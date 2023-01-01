@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/src/com/designPattern/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/designPattern/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/javaweb/httpStudy/HelloServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +356,7 @@
       <workItem from="1672135803904" duration="1700000" />
       <workItem from="1672320572504" duration="3497000" />
       <workItem from="1672365077698" duration="9464000" />
-      <workItem from="1672562061066" duration="2707000" />
+      <workItem from="1672562061066" duration="3548000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
