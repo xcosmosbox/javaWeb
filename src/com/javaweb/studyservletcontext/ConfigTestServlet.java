@@ -86,7 +86,7 @@ public class ConfigTestServlet extends GenericServlet {
         // get user data
         Object userObj = application.getAttribute("user");
         // display
-        out.print(userObj + "<br>");
+        out.print(userObj + "<br>");   
 
 
 
