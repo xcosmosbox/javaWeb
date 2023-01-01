@@ -9,12 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/web/TestGet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/javaweb/httpStudy/GetServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javaweb/httpStudy/GetServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/javaweb/httpStudy/PostServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javaweb/httpStudy/PostServlet.java" afterDir="false" />
-    </list>
+    <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -358,7 +353,7 @@
       <workItem from="1671841731499" duration="3074000" />
       <workItem from="1672135803904" duration="1700000" />
       <workItem from="1672320572504" duration="3497000" />
-      <workItem from="1672365077698" duration="8837000" />
+      <workItem from="1672365077698" duration="9464000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
