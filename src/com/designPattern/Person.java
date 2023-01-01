@@ -1,6 +1,7 @@
 package com.designPattern;
 
 public abstract class Person {
+    //Using 'final' keyword to protect day() method to avoid that subclass override day() method
     public final void day(){
         wakeUp();
         eatBreakfast();
