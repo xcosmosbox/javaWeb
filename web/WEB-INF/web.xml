@@ -12,6 +12,17 @@
         <param-name>pageSize</param-name>
         <param-value>10</param-value>
     </context-param>
+
+
+    <servlet>
+        <servlet-name>requestTest</servlet-name>
+        <servlet-class>com.javaweb.httpStudy.RequestTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>requestTest</servlet-name>
+        <url-pattern>/userRegister</url-pattern>
+    </servlet-mapping>
+
     
     <servlet>
         <servlet-name>helloServlet</servlet-name>
