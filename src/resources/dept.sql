@@ -2,7 +2,7 @@
 drop table if exists dept;
 
 create table dept(
-    deptno int,
+    deptno int primary key ,
     dname varchar(255),
     loc varchar(255)
 );
