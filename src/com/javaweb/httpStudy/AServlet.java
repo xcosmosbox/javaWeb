@@ -77,11 +77,16 @@ public class AServlet extends HttpServlet {
 
         req.setAttribute("sysTime", nowDate);
 
+        // Getting ip addr for client
+        String remoteAddr = req.getRemoteAddr();
+        System.out.println("Client's ip addr: " + remoteAddr);
+
         // 1. Getting transmit object
         RequestDispatcher dispatcher =  req.getRequestDispatcher("/bHttp");
 
         // 2. call 'forward' method from request dispatcher to forward resources
         dispatcher.forward(req,resp);
+
 
 
 
