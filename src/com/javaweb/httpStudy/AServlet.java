@@ -1,5 +1,6 @@
 package com.javaweb.httpStudy;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServlet;
@@ -75,5 +76,14 @@ public class AServlet extends HttpServlet {
         Date nowDate = new Date();
 
         req.setAttribute("sysTime", nowDate);
+
+        // 1. Getting transmit object
+        RequestDispatcher dispatcher =  req.getRequestDispatcher("/bHttp");
+
+        // 2. call 'forward' method from request dispatcher to forward resources
+        dispatcher.forward(req,resp);
+
+
+
     }
 }
