@@ -15,6 +15,25 @@
 
 
     <servlet>
+        <servlet-name>AServletHttp</servlet-name>
+        <servlet-class>com.javaweb.httpStudy.AServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AServletHttp</servlet-name>
+        <url-pattern>/aHttp</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>BServletHttp</servlet-name>
+        <servlet-class>com.javaweb.httpStudy.BServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BServletHttp</servlet-name>
+        <url-pattern>/bHttp</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
         <servlet-name>requestTest</servlet-name>
         <servlet-class>com.javaweb.httpStudy.RequestTest</servlet-class>
     </servlet>
