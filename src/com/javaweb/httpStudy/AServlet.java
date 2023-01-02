@@ -17,7 +17,7 @@ public class AServlet extends HttpServlet {
      *
      * <p>Overriding this method to support a GET request also
      * automatically supports an HTTP HEAD request. A HEAD
-     * request is a GET request that returns no body in the
+     * request is a GET request that returns nobody in the
      * response, only the request header fields.
      *
      * <p>When overriding this method, read the request data,
