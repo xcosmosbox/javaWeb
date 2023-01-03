@@ -37,6 +37,13 @@ public class DBUtil {
     }
 
     // Release 'ResultSet', 'Statement' and 'Connection' obj resources
+
+    /**
+     *
+     * @param connection connection obj
+     * @param statement database operation obj
+     * @param resultSet result set obj
+     */
     public static void close(Connection connection, Statement statement, ResultSet resultSet){
         if (resultSet != null) {
             try {
