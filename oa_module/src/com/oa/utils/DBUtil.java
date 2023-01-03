@@ -36,8 +36,8 @@ public class DBUtil {
         return connection;
     }
 
-    // Release 'ResultSet', 'Statement' and 'Connection' obj resources
 
+    // Release 'ResultSet', 'Statement' and 'Connection' obj resources
     /**
      *
      * @param connection connection obj
