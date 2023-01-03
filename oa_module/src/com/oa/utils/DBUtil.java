@@ -1,8 +1,6 @@
 package com.oa.utils;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ResourceBundle;
 
 /**
@@ -36,6 +34,31 @@ public class DBUtil {
         //Getting connection obj
         Connection connection = DriverManager.getConnection(URL,USER,PASSWORD);
         return connection;
+    }
+
+    // Release 'ResultSet', 'Statement' and 'Connection' obj resources
+    public static void close(Connection connection, Statement statement, ResultSet resultSet){
+        if (resultSet != null) {
+            try {
+                resultSet.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if (statement != null) {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
 }
