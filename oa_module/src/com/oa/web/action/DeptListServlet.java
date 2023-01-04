@@ -117,15 +117,17 @@ public class DeptListServlet extends HttpServlet {
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
 
+            // Process the result set
+            int i = 0;
             while (resultSet.next()){
                 String deptno = resultSet.getString("deptno");
                 String dname = resultSet.getString("dname");
                 String loc = resultSet.getString("loc");
 
                 out.print("    <tr>");
-                out.print("      <td>1</td>");
-                out.print("      <td>10</td>");
-                out.print("      <td>sale</td>");
+                out.print("      <td>"+(++i)+"</td>");
+                out.print("      <td>"+deptno+"</td>");
+                out.print("      <td>"+dname+"</td>");
                 out.print("      <td>");
                 out.print("        <a href=''>delete</a>");
                 out.print("        <a href='edit.html'>modify</a>");
