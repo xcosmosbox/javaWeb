@@ -164,7 +164,7 @@ public class DeptListServlet extends HttpServlet {
         //Static output statements
         out.print("  </table>");
         out.print("  <hr />");
-        out.print("  <a href='add.html'>add new dept</a>");
+        out.print("  <a href='"+contextPath+"/add.html'>add new dept</a>");
         out.print("</body>");
         out.print("</html>");
     }
