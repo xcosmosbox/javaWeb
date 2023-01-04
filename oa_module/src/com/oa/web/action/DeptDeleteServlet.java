@@ -62,10 +62,10 @@ public class DeptDeleteServlet extends HttpServlet {
      * <p>If the request is incorrectly formatted, <code>doGet</code>
      * returns an HTTP "Bad Request" message.
      *
-     * @param req  an {@link HttpServletRequest} object that
+     * @param request  an {@link HttpServletRequest} object that
      *             contains the request the client has made
      *             of the servlet
-     * @param resp an {@link HttpServletResponse} object that
+     * @param response an {@link HttpServletResponse} object that
      *             contains the response the servlet sends
      *             to the client
      * @throws IOException      if an input or output error is
