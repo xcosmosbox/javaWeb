@@ -22,6 +22,15 @@
         <url-pattern>/dept/detail</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>delete</servlet-name>
+        <servlet-class>com.oa.web.action.DeptDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/dept/delete</url-pattern>
+    </servlet-mapping>
+
 
     
 </web-app>
