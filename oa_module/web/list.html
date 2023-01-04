@@ -6,11 +6,11 @@
 </head>
 <body>
 
-  <script type="text/javascript">
+  <script type='text/javascript'>
     function del(del_no) {
-      var ok = window.confirm("Double check for deleting!")
+      var ok = window.confirm('Double check for deleting!')
       if(ok){
-        document.location.href = "oa_module/dept/delete?deptno=" + del_no;
+        document.location.href = 'oa_module/dept/delete?deptno=' + del_no;
       }
     }
 
@@ -31,7 +31,7 @@
       <td>10</td>
       <td>sale</td>
       <td>
-        <a href='javascript:void(0)' onclick="del()">delete</a>
+        <a href='javascript:void(0)' onclick='del(10)'>delete</a>
         <a href='edit.html'>modify</a>
         <a href='detail.html'>more info</a>
       </td>
