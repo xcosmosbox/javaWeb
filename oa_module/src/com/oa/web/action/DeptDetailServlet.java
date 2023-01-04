@@ -21,6 +21,27 @@ public class DeptDetailServlet extends HttpServlet {
 
         String deptno = request.getParameter("deptno");
 
+
+        out.print("<!DOCTYPE html>");
+        out.print("<html lang='en'>");
+        out.print("<head>");
+        out.print("    <meta charset='UTF-8'>");
+        out.print("    <title>Detail</title>");
+        out.print("</head>");
+        out.print("<body>");
+        out.print("   <h1>dept detail</h1>");
+        out.print("   <hr/>");
+        out.print("               dept_no: 10 <br>");
+        out.print("               dept_name: sale <br>");
+        out.print("       dept_location: mel <br>");
+        out.print("");
+        out.print("   <input type='button' value='return' onclick='window.history.back()'/>");
+        out.print("");
+        out.print("</body>");
+        out.print("</html>");
+
+
+
         // JDBC
         // Connect database and query all department
         Connection connection = null;
@@ -34,7 +55,7 @@ public class DeptDetailServlet extends HttpServlet {
             resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()){
-                
+
             }
 
         } catch (SQLException e) {
