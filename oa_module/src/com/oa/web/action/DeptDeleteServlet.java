@@ -1,5 +1,6 @@
 package com.oa.web.action;
 
+import com.oa.utils.DBUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServlet;
@@ -7,6 +8,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DeptDeleteServlet extends HttpServlet {
     /**
@@ -70,7 +76,57 @@ public class DeptDeleteServlet extends HttpServlet {
      * @see ServletResponse#setContentType
      */
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Delete department according to the deptno
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        String deptno = request.getParameter("deptno");
+
+
+        // JDBC
+        // Connect database and query all department
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        int count = 0;
+        try {
+            connection = DBUtil.getConnection();
+
+            // Open workflow
+            connection.setAutoCommit(false);
+
+            String sql = "delete from dept where deptno = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,deptno);
+            count = preparedStatement.executeUpdate();
+
+            // commit
+            connection.commit();
+
+        } catch (SQLException e) {
+            // Rollback when exception has been thrown
+            if (connection != null) {
+                try {
+                    connection.rollback();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(connection,preparedStatement,resultSet);
+        }
+
+        if (count == 1){
+            // success
+            // forward servlet
+            request.getRequestDispatcher("/dept/list").forward(request,response);
+        }
+        else {
+
+        }
+
+
     }
 }
