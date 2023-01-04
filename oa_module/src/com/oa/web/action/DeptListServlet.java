@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -76,6 +77,13 @@ public class DeptListServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        // Set type of response context and type of character set to avoid error encoding
+//        resp.setContentType("text/html;charset=UTF-8");
+        resp.setContentType("text/html");
+        PrintWriter out = resp.getWriter();
+
+
         // Connect database and query all department
         Connection connection = null;
         PreparedStatement preparedStatement = null;
