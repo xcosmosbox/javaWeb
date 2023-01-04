@@ -98,7 +98,7 @@ public class DeptListServlet extends HttpServlet {
         out.print("<script type='text/javascript'>");
         out.print("function del(del_no) {");
         out.print("    if(window.confirm('Double check for deleting!')){");
-        out.print("        document.location.href = 'oa_module/dept/delete?deptno=' + del_no;");
+        out.print("        document.location.href = '"+contextPath+"/dept/delete?deptno=' + del_no;");
         out.print("    }");
         out.print("}");
         out.print("</script>");
