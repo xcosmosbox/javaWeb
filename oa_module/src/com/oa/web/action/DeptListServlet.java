@@ -83,6 +83,7 @@ public class DeptListServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
 
+        //Static output statements
         out.print("<!DOCTYPE html>");
         out.print("<html lang='en'>");
         out.print("<head>");
@@ -99,21 +100,10 @@ public class DeptListServlet extends HttpServlet {
         out.print("      <th>dept_name</th>");
         out.print("      <th>operation</th>");
         out.print("    </tr>");
-        out.print("    <tr>");
-        out.print("      <td>1</td>");
-        out.print("      <td>10</td>");
-        out.print("      <td>sale</td>");
-        out.print("      <td>");
-        out.print("        <a href=''>delete</a>");
-        out.print("        <a href='edit.html'>modify</a>");
-        out.print("        <a href='detail.html'>more info</a>");
-        out.print("      </td>");
-        out.print("    </tr>");
-        out.print("  </table>");
-        out.print("  <hr />");
-        out.print("  <a href='add.html'>add new dept</a>");
-        out.print("</body>");
-        out.print("</html>");
+
+
+
+
 
 
         // Connect database and query all department
@@ -131,6 +121,18 @@ public class DeptListServlet extends HttpServlet {
                 String deptno = resultSet.getString("deptno");
                 String dname = resultSet.getString("dname");
                 String loc = resultSet.getString("loc");
+
+                out.print("    <tr>");
+                out.print("      <td>1</td>");
+                out.print("      <td>10</td>");
+                out.print("      <td>sale</td>");
+                out.print("      <td>");
+                out.print("        <a href=''>delete</a>");
+                out.print("        <a href='edit.html'>modify</a>");
+                out.print("        <a href='detail.html'>more info</a>");
+                out.print("      </td>");
+                out.print("    </tr>");
+
             }
 
         } catch (SQLException e) {
@@ -138,5 +140,12 @@ public class DeptListServlet extends HttpServlet {
         } finally {
             DBUtil.close(connection,preparedStatement,resultSet);
         }
+
+        //Static output statements
+        out.print("  </table>");
+        out.print("  <hr />");
+        out.print("  <a href='add.html'>add new dept</a>");
+        out.print("</body>");
+        out.print("</html>");
     }
 }
