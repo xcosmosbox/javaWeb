@@ -87,6 +87,12 @@ public class DeptListServlet extends HttpServlet {
             preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
 
+            while (resultSet.next()){
+                String deptno = resultSet.getString("deptno");
+                String dname = resultSet.getString("dname");
+                String loc = resultSet.getString("loc");
+            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
