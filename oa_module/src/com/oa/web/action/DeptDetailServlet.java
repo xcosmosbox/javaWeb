@@ -21,7 +21,7 @@ public class DeptDetailServlet extends HttpServlet {
 
         String deptno = request.getParameter("deptno");
 
-
+        //Static block
         out.print("<!DOCTYPE html>");
         out.print("<html lang='en'>");
         out.print("<head>");
@@ -31,15 +31,6 @@ public class DeptDetailServlet extends HttpServlet {
         out.print("<body>");
         out.print("   <h1>dept detail</h1>");
         out.print("   <hr/>");
-        out.print("               dept_no: 10 <br>");
-        out.print("               dept_name: sale <br>");
-        out.print("       dept_location: mel <br>");
-        out.print("");
-        out.print("   <input type='button' value='return' onclick='window.history.back()'/>");
-        out.print("");
-        out.print("</body>");
-        out.print("</html>");
-
 
 
         // JDBC
@@ -55,7 +46,11 @@ public class DeptDetailServlet extends HttpServlet {
             resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()){
-
+                String dname = resultSet.getString("dname");
+                String loc = resultSet.getString("loc");
+                out.print("       dept_no: "+deptno+" <br>");
+                out.print("       dept_name: "+dname+" <br>");
+                out.print("       dept_location: "+loc+" <br>");
             }
 
         } catch (SQLException e) {
@@ -64,6 +59,12 @@ public class DeptDetailServlet extends HttpServlet {
             DBUtil.close(connection,preparedStatement,resultSet);
         }
 
+        //Static block
+        out.print("");
+        out.print("   <input type='button' value='return' onclick='window.history.back()'/>");
+        out.print("");
+        out.print("</body>");
+        out.print("</html>");
 
 
 
