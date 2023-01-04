@@ -124,7 +124,7 @@ public class DeptDeleteServlet extends HttpServlet {
             request.getRequestDispatcher("/dept/list").forward(request,response);
         }
         else {
-
+            request.getRequestDispatcher("/error.html").forward(request,response);
         }
 
 
