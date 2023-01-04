@@ -19,6 +19,10 @@ public class DBUtil {
 
     static {
         try {
+//            System.out.println(DRIVER);
+//            System.out.println(URL);
+//            System.out.println(USER);
+//            System.out.println(PASSWORD);
             Class.forName(DRIVER);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -28,7 +32,7 @@ public class DBUtil {
     /**
      *
      * @return connection Database connection object
-     * @throws SQLException
+     * @throws SQLException SQLException
      */
     public static Connection getConnection() throws SQLException {
         //Getting connection obj
