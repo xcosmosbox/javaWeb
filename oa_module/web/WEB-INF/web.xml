@@ -12,7 +12,16 @@
         <servlet-name>list</servlet-name>
         <url-pattern>/dept/list</url-pattern>
     </servlet-mapping>
-    
-    
+
+    <servlet>
+        <servlet-name>detail</servlet-name>
+        <servlet-class>com.oa.web.action.DeptDetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>detail</servlet-name>
+        <url-pattern>/dept/detail</url-pattern>
+    </servlet-mapping>
+
+
     
 </web-app>
