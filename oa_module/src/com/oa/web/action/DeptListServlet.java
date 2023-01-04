@@ -78,6 +78,11 @@ public class DeptListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        //Getting root path for application
+        String contextPath = req.getContextPath();
+
+
+
         // Set type of response context and type of character set to avoid error encoding
 //        resp.setContentType("text/html;charset=UTF-8");
         resp.setContentType("text/html");
@@ -131,7 +136,7 @@ public class DeptListServlet extends HttpServlet {
                 out.print("      <td>");
                 out.print("        <a href=''>delete</a>");
                 out.print("        <a href='edit.html'>modify</a>");
-                out.print("        <a href='detail.html'>more info</a>");
+                out.print("        <a href='"+contextPath+"/dept/detail?deptno="+deptno+"'>more info</a>");
                 out.print("      </td>");
                 out.print("    </tr>");
 
