@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oa_module/src/com/oa/web/action/DeptListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/oa_module/src/com/oa/web/action/DeptListServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,7 +373,7 @@
       <workItem from="1672644145950" duration="4721000" />
       <workItem from="1672659701175" duration="1914000" />
       <workItem from="1672737205429" duration="3550000" />
-      <workItem from="1672801935122" duration="1201000" />
+      <workItem from="1672801935122" duration="1903000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
