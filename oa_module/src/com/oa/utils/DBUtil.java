@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
  */
 public class DBUtil {
     //Create static resources bundle
-    private static final String DB_BUNDLE = "resources.db";
+    private static final String DB_BUNDLE = "resources/db";
     private static final ResourceBundle DB = ResourceBundle.getBundle(DB_BUNDLE);
 
     //Getting info from bundle
