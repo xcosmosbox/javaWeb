@@ -70,14 +70,18 @@ public class DeptSaveServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+//        response.setContentType("text/html");
+//        PrintWriter out = response.getWriter();
 
         request.setCharacterEncoding("UTF-8");
 
         String deptno = request.getParameter("deptno");
         String dname = request.getParameter("dname");
         String loc = request.getParameter("loc");
+
+        System.out.println(deptno);
+        System.out.println(dname);
+        System.out.println(loc);
 
         // JDBC
         // Connect database and query all department
