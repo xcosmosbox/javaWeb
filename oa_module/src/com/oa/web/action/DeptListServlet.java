@@ -94,17 +94,20 @@ public class DeptListServlet extends HttpServlet {
         out.print("<head>");
         out.print("    <meta charset='UTF-8'>");
         out.print("    <title>dept list</title>");
-        out.print("</head>");
-        out.print("<body>");
 
         out.print("<script type='text/javascript'>");
-        out.print("        function del(del_no) {");
+        out.print("function del(del_no) {");
         out.print("    var ok = window.confirm('Double check for deleting!')");
         out.print("    if(ok){");
         out.print("        document.location.href = 'oa_module/dept/delete?deptno=' + del_no;");
         out.print("    }");
         out.print("}");
         out.print("</script>");
+
+        out.print("</head>");
+        out.print("<body>");
+
+
 
 
         out.print("  <h1 align='center'>dept list</h1>");
