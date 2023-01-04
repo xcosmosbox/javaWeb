@@ -96,6 +96,17 @@ public class DeptListServlet extends HttpServlet {
         out.print("    <title>dept list</title>");
         out.print("</head>");
         out.print("<body>");
+
+        out.print("<script type='text/javascript'>");
+        out.print("        function del(del_no) {");
+        out.print("    var ok = window.confirm('Double check for deleting!')");
+        out.print("    if(ok){");
+        out.print("        document.location.href = 'oa_module/dept/delete?deptno=' + del_no;");
+        out.print("    }");
+        out.print("}");
+        out.print("</script>");
+
+
         out.print("  <h1 align='center'>dept list</h1>");
         out.print("  <hr />");
         out.print("  <table border='1px' align='center' width='50%'>");
@@ -134,7 +145,7 @@ public class DeptListServlet extends HttpServlet {
                 out.print("      <td>"+deptno+"</td>");
                 out.print("      <td>"+dname+"</td>");
                 out.print("      <td>");
-                out.print("        <a href=''>delete</a>");
+                out.print("        <a href='javascript:void(0)' onclick='del("+deptno+")'>delete</a>");
                 out.print("        <a href='edit.html'>modify</a>");
                 out.print("        <a href='"+contextPath+"/dept/detail?deptno="+deptno+"'>more info</a>");
                 out.print("      </td>");
