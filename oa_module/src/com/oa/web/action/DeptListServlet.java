@@ -83,6 +83,38 @@ public class DeptListServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
 
+        out.print("<!DOCTYPE html>");
+        out.print("<html lang='en'>");
+        out.print("<head>");
+        out.print("    <meta charset='UTF-8'>");
+        out.print("    <title>dept list</title>");
+        out.print("</head>");
+        out.print("<body>");
+        out.print("  <h1 align='center'>dept list</h1>");
+        out.print("  <hr />");
+        out.print("  <table border='1px' align='center' width='50%'>");
+        out.print("    <tr>");
+        out.print("      <th>serial_no</th>");
+        out.print("      <th>dept_no</th>");
+        out.print("      <th>dept_name</th>");
+        out.print("      <th>operation</th>");
+        out.print("    </tr>");
+        out.print("    <tr>");
+        out.print("      <td>1</td>");
+        out.print("      <td>10</td>");
+        out.print("      <td>sale</td>");
+        out.print("      <td>");
+        out.print("        <a href=''>delete</a>");
+        out.print("        <a href='edit.html'>modify</a>");
+        out.print("        <a href='detail.html'>more info</a>");
+        out.print("      </td>");
+        out.print("    </tr>");
+        out.print("  </table>");
+        out.print("  <hr />");
+        out.print("  <a href='add.html'>add new dept</a>");
+        out.print("</body>");
+        out.print("</html>");
+
 
         // Connect database and query all department
         Connection connection = null;
