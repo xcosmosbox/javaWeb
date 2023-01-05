@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -76,24 +77,50 @@ public class DeptEditServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //Getting root path for application
+        String contextPath = request.getContextPath();
+
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
         String deptno = request.getParameter("deptno");
+
+        out.print("<!DOCTYPE html>");
+        out.print("<html lang='en'>");
+        out.print("<head>");
+        out.print("  <meta charset='UTF-8'>");
+        out.print("  <title>Edit dept</title>");
+        out.print("</head>");
+        out.print("<body>");
+        out.print("<h1>Edit dept</h1>");
+        out.print("<hr/>");
+        out.print("<form action='"+contextPath+"/dept/modify' method='post'>");
+
+
+
 
         // JDBC
         // Connect database and query all department
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        int count = 0;
         try {
             connection = DBUtil.getConnection();
 
-            String sql = "insert into dept(deptno, dname, loc) values(?,?,?)";
+            String sql = "select dname, loc as location from dept where deptno = ?";
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,deptno);
-            preparedStatement.setString(2,dname);
-            preparedStatement.setString(3,loc);
+            resultSet = preparedStatement.executeQuery();
 
-            count = preparedStatement.executeUpdate();
+            if (resultSet.next()){
+                String dname = resultSet.getString("dname");
+                String location = resultSet.getString("location");
+
+                out.print("               dept_no<input type='text' name='deptno' value='"+deptno+"' readonly/><br>");
+                out.print("               dept_name<input type='text' name='dname' value='"+dname+"'/><br>");
+                out.print("               dept_location<input type='text' name='loc' value='"+location+"'/><br>");
+
+            }
 
 
         } catch (SQLException e) {
@@ -101,5 +128,10 @@ public class DeptEditServlet extends HttpServlet {
         } finally {
             DBUtil.close(connection,preparedStatement,resultSet);
         }
+
+        out.print(" <input type='submit' value='Update'/><br>");
+        out.print("</form>");
+        out.print("</body>");
+        out.print("</html>");
     }
 }
