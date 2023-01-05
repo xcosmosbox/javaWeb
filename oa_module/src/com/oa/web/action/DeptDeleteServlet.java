@@ -121,10 +121,14 @@ public class DeptDeleteServlet extends HttpServlet {
         if (count == 1){
             // success
             // forward servlet
-            request.getRequestDispatcher("/dept/list").forward(request,response);
+//            request.getRequestDispatcher("/dept/list").forward(request,response);
+            response.sendRedirect(request.getContextPath() + "/dept/list");
+
         }
         else {
-            request.getRequestDispatcher("/error.html").forward(request,response);
+//            request.getRequestDispatcher("/error.html").forward(request,response);
+            response.sendRedirect(request.getContextPath() + "/error.html");
+
         }
 
 
