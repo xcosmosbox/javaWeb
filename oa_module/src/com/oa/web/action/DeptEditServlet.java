@@ -1,5 +1,6 @@
 package com.oa.web.action;
 
+import com.oa.utils.DBUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServlet;
@@ -7,6 +8,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DeptEditServlet extends HttpServlet {
     /**
@@ -71,6 +76,30 @@ public class DeptEditServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        super.doGet(req, resp);
+        String deptno = request.getParameter("deptno");
+
+        // JDBC
+        // Connect database and query all department
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        int count = 0;
+        try {
+            connection = DBUtil.getConnection();
+
+            String sql = "insert into dept(deptno, dname, loc) values(?,?,?)";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,deptno);
+            preparedStatement.setString(2,dname);
+            preparedStatement.setString(3,loc);
+
+            count = preparedStatement.executeUpdate();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(connection,preparedStatement,resultSet);
+        }
     }
 }
