@@ -206,7 +206,7 @@ public class DeptListServlet extends HttpServlet {
                 out.print("      <td>"+dname+"</td>");
                 out.print("      <td>");
                 out.print("        <a href='javascript:void(0)' onclick='del("+deptno+")'>delete</a>");
-                out.print("        <a href='edit.html'>modify</a>");
+                out.print("        <a href='"+contextPath+"/dept/edit?deptno="+deptno+"'>modify</a>");
                 out.print("        <a href='"+contextPath+"/dept/detail?deptno="+deptno+"'>more info</a>");
                 out.print("      </td>");
                 out.print("    </tr>");
