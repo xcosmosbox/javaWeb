@@ -110,7 +110,10 @@ public class DeptSaveServlet extends HttpServlet {
         if (count == 1){
             // success
             // forward servlet
-            request.getRequestDispatcher("/dept/list").forward(request,response);
+//            request.getRequestDispatcher("/dept/list").forward(request,response);
+
+            // redirect
+            response.sendRedirect(request.getContextPath() + "/dept/list");
         }
         else {
             request.getRequestDispatcher("/error.html").forward(request,response);
