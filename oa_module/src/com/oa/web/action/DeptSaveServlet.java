@@ -116,7 +116,9 @@ public class DeptSaveServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/dept/list");
         }
         else {
-            request.getRequestDispatcher("/error.html").forward(request,response);
+//            request.getRequestDispatcher("/error.html").forward(request,response);
+            response.sendRedirect(request.getContextPath() + "/error.html");
+
         }
 
     }
