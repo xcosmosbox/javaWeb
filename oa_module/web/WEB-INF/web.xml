@@ -40,6 +40,15 @@
         <url-pattern>/dept/save</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>edit</servlet-name>
+        <servlet-class>com.oa.web.action.DeptEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>edit</servlet-name>
+        <url-pattern>/dept/edit</url-pattern>
+    </servlet-mapping>
+
 
     
 </web-app>
