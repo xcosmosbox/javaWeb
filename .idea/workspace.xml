@@ -464,7 +464,7 @@
       <workItem from="1672801935122" duration="1903000" />
       <workItem from="1672807160005" duration="10870000" />
       <workItem from="1672840280470" duration="3173000" />
-      <workItem from="1672901478610" duration="607000" />
+      <workItem from="1672901478610" duration="1317000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
@@ -500,16 +500,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <option name="LAST_COMMIT_MESSAGE" value="init" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/oa_module/src/com/oa/web/action/DeptSaveServlet.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
