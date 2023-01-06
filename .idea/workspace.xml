@@ -9,12 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oa_module/src/com/oa/web/action/DeptDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/oa_module/src/com/oa/web/action/DeptDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oa_module/src/com/oa/web/action/DeptModifyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/oa_module/src/com/oa/web/action/DeptModifyServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oa_module/src/com/oa/web/action/DeptSaveServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/oa_module/src/com/oa/web/action/DeptSaveServlet.java" afterDir="false" />
-    </list>
+    <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -469,7 +464,7 @@
       <workItem from="1672801935122" duration="1903000" />
       <workItem from="1672807160005" duration="10870000" />
       <workItem from="1672840280470" duration="3173000" />
-      <workItem from="1672901478610" duration="4975000" />
+      <workItem from="1672901478610" duration="5619000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
