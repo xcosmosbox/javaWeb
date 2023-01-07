@@ -13,8 +13,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-//@WebServlet(name = "DeptServlet", value = {"/dept/list", "/dept/save","/dept/edit","/dept/detail","/dept/delete","/dept/modify",})
-@WebServlet("/dept/*")
+@WebServlet(name = "DeptServlet", value = {"/dept/list", "/dept/save","/dept/edit","/dept/detail","/dept/delete","/dept/modify",})
+//@WebServlet("/dept/*")
 public class DeptServlet extends HttpServlet {
     /**
      * Receives standard HTTP requests from the public
@@ -328,14 +328,14 @@ public class DeptServlet extends HttpServlet {
 
     private void doList(HttpServletRequest request, HttpServletResponse response) throws IOException{
 //Getting root path for application
-        String contextPath = req.getContextPath();
+        String contextPath = request.getContextPath();
 
 
 
         // Set type of response context and type of character set to avoid error encoding
 //        resp.setContentType("text/html;charset=UTF-8");
-        resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
 
         //Static output statements
         out.print("<!DOCTYPE html>");
