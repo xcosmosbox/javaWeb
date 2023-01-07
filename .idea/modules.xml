@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../AnnotationDev/AnnotationDev.iml" filepath="$PROJECT_DIR$/../AnnotationDev/AnnotationDev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AnnotationDev/AnnotationDev.iml" filepath="$PROJECT_DIR$/AnnotationDev/AnnotationDev.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaWeb.iml" filepath="$PROJECT_DIR$/javaWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/oa_module/oa_module.iml" filepath="$PROJECT_DIR$/oa_module/oa_module.iml" />
     </modules>
