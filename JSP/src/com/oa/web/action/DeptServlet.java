@@ -54,7 +54,7 @@ public class DeptServlet extends HttpServlet {
         }
     }
 
-    private void doList(HttpServletRequest request, HttpServletResponse response) {
+    private void doList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         // Process the result set
         ArrayList deptArrayList = new ArrayList<DeptWarpper>();
 
@@ -98,15 +98,93 @@ public class DeptServlet extends HttpServlet {
     }
 
     private void doSave(HttpServletRequest request, HttpServletResponse response) {
+        String deptno = request.getParameter("deptno");
+        String dname = request.getParameter("dname");
+        String loc = request.getParameter("loc");
 
+        // JDBC
+        // Connect database and query all department
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        int count = 0;
+        try {
+            connection = DBUtil.getConnection();
+
+            String sql = "insert into dept(deptno, dname, loc) values(?,?,?)";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,deptno);
+            preparedStatement.setString(2,dname);
+            preparedStatement.setString(3,loc);
+
+            count = preparedStatement.executeUpdate();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(connection,preparedStatement,resultSet);
+        }
+
+        if (count == 1){
+            // success
+            // forward servlet
+//            request.getRequestDispatcher("/dept/list").forward(request,response);
+
+            // redirect
+            response.sendRedirect(request.getContextPath() + "/dept/list");
+        }
+        else {
+//            request.getRequestDispatcher("/error.html").forward(request,response);
+            response.sendRedirect(request.getContextPath() + "/error.html");
+
+        }
     }
 
     private void doEdit(HttpServletRequest request, HttpServletResponse response) {
 
+
     }
 
     private void doDetail(HttpServletRequest request, HttpServletResponse response) {
+        String deptno = request.getParameter("deptno");
 
+        // JDBC
+        // Connect database and query all department
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBUtil.getConnection();
+            String sql = "select dname, loc from dept where deptno = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,deptno);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()){
+                String dname = resultSet.getString("dname");
+                String loc = resultSet.getString("loc");
+                request.setAttribute("dept_no",deptno);
+                request.setAttribute("dept_name",dname);
+                request.setAttribute("location",loc);
+//                out.print("       dept_no: "+deptno+" <br>");
+//                out.print("       dept_name: "+dname+" <br>");
+//                out.print("       dept_location: "+loc+" <br>");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(connection,preparedStatement,resultSet);
+        }
+
+        try {
+            request.getRequestDispatcher("/detail.jsp").forward(request,response);
+        } catch (ServletException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void doDel(HttpServletRequest request, HttpServletResponse response) {
