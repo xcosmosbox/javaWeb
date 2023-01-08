@@ -1,3 +1,5 @@
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.oa.bean.DeptWarpper" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
@@ -12,7 +14,7 @@
     function del(del_no) {
       var ok = window.confirm('Double check for deleting!')
       if(ok){
-        document.location.href = 'oa_module/dept/delete?deptno=' + del_no;
+        document.location.href = '<%=request.getContextPath() %>/delete?deptno=' + del_no;
       }
     }
 
@@ -28,18 +30,32 @@
       <th>dept_name</th>
       <th>operation</th>
     </tr>
-    <tr>
-      <td>1</td>
-      <td>10</td>
-      <td>sale</td>
-      <td>
-        <a href='javascript:void(0)' onclick='del(10)'>delete</a>
-        <a href='edit.jsp'>modify</a>
-        <a href='detail.jsp'>more info</a>
-      </td>
-    </tr>
+
+    <%
+      ArrayList<DeptWarpper> arrayList = (ArrayList) request.getAttribute("deptArrayList");
+    %>
+    <%
+      int i = 0;
+      for (DeptWarpper dept: arrayList
+            )
+    { %>
+
+
+      <tr>
+        <td><%=(++i)%></td>
+        <td><%=dept.getDeptno()%></td>
+        <td><%=dept.getDname()%></td>
+        <td>
+          <a href='javascript:void(0)' onclick='del(10)'>delete</a>
+          <a href='<%=request.getContextPath() %>/edit.jsp'>modify</a>
+          <a href='<%=request.getContextPath() %>/detail.jsp'>more info</a>
+        </td>
+      </tr>
+    <%} %>
+
+
   </table>
   <hr />
-  <a href='add.jsp'>add new dept</a>
+  <a href='<%=request.getContextPath() %>/add.jsp'>add new dept</a>
 </body>
 </html>
