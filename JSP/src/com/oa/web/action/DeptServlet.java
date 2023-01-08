@@ -142,7 +142,40 @@ public class DeptServlet extends HttpServlet {
     }
 
     private void doEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        String deptno = request.getParameter("deptno");
+        // JDBC
+        // Connect database and query all department
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DBUtil.getConnection();
 
+            String sql = "select dname, loc as location from dept where deptno = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,deptno);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()){
+                String dname = resultSet.getString("dname");
+                String location = resultSet.getString("location");
+
+                request.setAttribute("wasEditEdpt",new DeptWarpper(deptno,dname,location));
+
+//                out.print("               dept_no<input type='text' name='deptno' value='"+deptno+"' readonly/><br>");
+//                out.print("               dept_name<input type='text' name='dname' value='"+dname+"'/><br>");
+//                out.print("               dept_location<input type='text' name='loc' value='"+location+"'/><br>");
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(connection,preparedStatement,resultSet);
+        }
+
+        request.getRequestDispatcher("/edit.jsp").forward(request,response);
 
     }
 
@@ -239,6 +272,45 @@ public class DeptServlet extends HttpServlet {
     }
 
     private void doModify(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        String deptno = request.getParameter("deptno");
+        String dname = request.getParameter("dname");
+        String loc = request.getParameter("loc");
+        // JDBC
+        // Connect database and query all department
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        int count = 0;
+        try {
+            connection = DBUtil.getConnection();
 
+            String sql = "update dept set dname = ?, loc = ? where deptno = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,dname);
+            preparedStatement.setString(2,loc);
+            preparedStatement.setString(3,deptno);
+
+            count = preparedStatement.executeUpdate();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(connection,preparedStatement,resultSet);
+        }
+
+        if (count == 1){
+            // success
+            // forward servlet
+//            request.getRequestDispatcher("/dept/list").forward(request,response);
+
+            // redirect
+            response.sendRedirect(request.getContextPath() + "/dept/list");
+        }
+        else {
+//            request.getRequestDispatcher("/error.html").forward(request,response);
+            response.sendRedirect(request.getContextPath() + "/error.jsp");
+
+        }
     }
 }
