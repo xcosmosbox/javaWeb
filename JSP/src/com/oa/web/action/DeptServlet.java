@@ -188,7 +188,54 @@ public class DeptServlet extends HttpServlet {
     }
 
     private void doDel(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        String deptno = request.getParameter("deptno");
 
+        // JDBC
+        // Connect database and query all department
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        int count = 0;
+        try {
+            connection = DBUtil.getConnection();
+
+            // Open workflow
+            connection.setAutoCommit(false);
+
+            String sql = "delete from dept where deptno = ?";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,deptno);
+            count = preparedStatement.executeUpdate();
+
+            // commit
+            connection.commit();
+
+        } catch (SQLException e) {
+            // Rollback when exception has been thrown
+            if (connection != null) {
+                try {
+                    connection.rollback();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(connection,preparedStatement,resultSet);
+        }
+
+        if (count == 1){
+            // success
+            // forward servlet
+//            request.getRequestDispatcher("/dept/list").forward(request,response);
+            response.sendRedirect(request.getContextPath() + "/dept/list");
+
+        }
+        else {
+//            request.getRequestDispatcher("/error.html").forward(request,response);
+            response.sendRedirect(request.getContextPath() + "/error.jsp");
+
+        }
     }
 
     private void doModify(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
