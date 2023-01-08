@@ -97,7 +97,7 @@ public class DeptServlet extends HttpServlet {
         }
     }
 
-    private void doSave(HttpServletRequest request, HttpServletResponse response) {
+    private void doSave(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String deptno = request.getParameter("deptno");
         String dname = request.getParameter("dname");
         String loc = request.getParameter("loc");
@@ -136,17 +136,17 @@ public class DeptServlet extends HttpServlet {
         }
         else {
 //            request.getRequestDispatcher("/error.html").forward(request,response);
-            response.sendRedirect(request.getContextPath() + "/error.html");
+            response.sendRedirect(request.getContextPath() + "/error.jsp");
 
         }
     }
 
-    private void doEdit(HttpServletRequest request, HttpServletResponse response) {
+    private void doEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
 
     }
 
-    private void doDetail(HttpServletRequest request, HttpServletResponse response) {
+    private void doDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         String deptno = request.getParameter("deptno");
 
         // JDBC
@@ -187,11 +187,11 @@ public class DeptServlet extends HttpServlet {
         }
     }
 
-    private void doDel(HttpServletRequest request, HttpServletResponse response) {
+    private void doDel(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
     }
 
-    private void doModify(HttpServletRequest request, HttpServletResponse response) {
+    private void doModify(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
     }
 }
