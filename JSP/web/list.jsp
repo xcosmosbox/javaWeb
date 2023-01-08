@@ -14,7 +14,7 @@
     function del(del_no) {
       var ok = window.confirm('Double check for deleting!')
       if(ok){
-        document.location.href = '<%=request.getContextPath() %>/delete?deptno=' + del_no;
+        document.location.href = '<%=request.getContextPath() %>/dept/delete?deptno=' + del_no;
       }
     }
 
@@ -46,9 +46,9 @@
         <td><%=dept.getDeptno()%></td>
         <td><%=dept.getDname()%></td>
         <td>
-          <a href='javascript:void(0)' onclick='del(10)'>delete</a>
-          <a href='<%=request.getContextPath() %>/edit.jsp'>modify</a>
-          <a href='<%=request.getContextPath() %>/detail.jsp'>more info</a>
+          <a href='javascript:void(0)' onclick='del(<%=dept.getDeptno()%>)'>delete</a>
+          <a href='<%=request.getContextPath() %>/dept/edit?deptno=<%=dept.getDeptno()%>'>modify</a>
+          <a href='<%=request.getContextPath() %>/dept/detail?deptno=<%=dept.getDeptno()%>'>more info</a>
         </td>
       </tr>
     <%} %>
@@ -56,6 +56,6 @@
 
   </table>
   <hr />
-  <a href='<%=request.getContextPath() %>/add.jsp'>add new dept</a>
+  <a href='<%=request.getContextPath() %>/dept/save'>add new dept</a>
 </body>
 </html>
