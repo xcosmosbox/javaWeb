@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="oa_module:war exploded" />
+      <artifact name="JSP:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -671,7 +671,7 @@
       <workItem from="1672840280470" duration="3173000" />
       <workItem from="1672901478610" duration="5619000" />
       <workItem from="1673007095730" duration="1211000" />
-      <workItem from="1673061933928" duration="10724000" />
+      <workItem from="1673061933928" duration="14357000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
