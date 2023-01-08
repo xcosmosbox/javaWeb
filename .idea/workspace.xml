@@ -11,11 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/web/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/web/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/web/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/web/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/web/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/web/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/web/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/web/error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/web/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/web/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSP/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/web/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -679,7 +675,7 @@
       <workItem from="1672901478610" duration="5619000" />
       <workItem from="1673007095730" duration="1211000" />
       <workItem from="1673061933928" duration="14357000" />
-      <workItem from="1673160685535" duration="2056000" />
+      <workItem from="1673160685535" duration="2219000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
