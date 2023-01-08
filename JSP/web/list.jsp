@@ -56,6 +56,6 @@
 
   </table>
   <hr />
-  <a href='<%=request.getContextPath() %>/dept/save'>add new dept</a>
+  <a href='<%=request.getContextPath() %>/add.jsp'>add new dept</a>
 </body>
 </html>
