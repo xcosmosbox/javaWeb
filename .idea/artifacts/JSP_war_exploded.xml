@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="JSP" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$USER_HOME$/Downloads/NeatDonwloadManager/Compressed/mysql-connector-j-8.0.31/mysql-connector-j-8.0.31.jar" />
+        </element>
       </element>
     </root>
   </artifact>
