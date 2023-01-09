@@ -38,20 +38,27 @@ public class DeptServlet extends HttpServlet {
      */
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String servletPath = request.getServletPath();
-        if ("/dept/list".equals(servletPath)){
-            doList(request,response);
-        } else if ("/dept/save".equals(servletPath)) {
-            doSave(request,response);
-        } else if ("/dept/edit".equals(servletPath)) {
-            doEdit(request,response);
-        } else if ("/dept/detail".equals(servletPath)) {
-            doDetail(request,response);
-        } else if ("/dept/delete".equals(servletPath)) {
-            doDel(request,response);
-        } else if ("/dept/modify".equals(servletPath)) {
-            doModify(request,response);
+        try {
+            if (request.getSession().getAttribute("login_succ") != null) {
+                String servletPath = request.getServletPath();
+                if ("/dept/list".equals(servletPath)){
+                    doList(request,response);
+                } else if ("/dept/save".equals(servletPath)) {
+                    doSave(request,response);
+                } else if ("/dept/edit".equals(servletPath)) {
+                    doEdit(request,response);
+                } else if ("/dept/detail".equals(servletPath)) {
+                    doDetail(request,response);
+                } else if ("/dept/delete".equals(servletPath)) {
+                    doDel(request,response);
+                } else if ("/dept/modify".equals(servletPath)) {
+                    doModify(request,response);
+                }
+            }
+        } catch (Exception e){
+            response.sendRedirect(request.getContextPath()+"/login_error.jsp");
         }
+
     }
 
     private void doList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
