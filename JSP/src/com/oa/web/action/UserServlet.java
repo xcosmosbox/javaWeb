@@ -1,5 +1,6 @@
 package com.oa.web.action;
 
+import com.oa.bean.AdminUserBean;
 import com.oa.bean.DeptWarpper;
 import com.oa.utils.DBUtil;
 import jakarta.servlet.*;
@@ -48,6 +49,8 @@ public class UserServlet extends HttpServlet {
         }
 
         if (success){
+            HttpSession httpSession = request.getSession();
+            httpSession.setAttribute("login_succ",new AdminUserBean(username,password));
             response.sendRedirect(request.getContextPath()+"/dept/list");
         }else {
             response.sendRedirect(request.getContextPath()+"/login_error.jsp");
