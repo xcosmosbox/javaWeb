@@ -57,6 +57,7 @@ public class DeptServlet extends HttpServlet {
             }
         } catch (Exception e){
             response.sendRedirect(request.getContextPath()+"/login_error.jsp");
+
         }
 
     }
