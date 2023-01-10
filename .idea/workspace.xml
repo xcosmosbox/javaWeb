@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Session:war exploded" />
+      <artifact name="JSP:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Session_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JSP/src/com/oa/bean/AdminUserBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Session/Session.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Session/src/com/javaweb/servlet/TestSessionServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Session/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Session/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/src/com/oa/web/action/DeptServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/src/com/oa/web/action/DeptServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/src/com/oa/web/action/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/src/com/oa/web/action/UserServlet.java" afterDir="false" />
-    </list>
+    <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -775,7 +764,7 @@
       <workItem from="1673007095730" duration="1211000" />
       <workItem from="1673061933928" duration="14357000" />
       <workItem from="1673160685535" duration="13292000" />
-      <workItem from="1673263471012" duration="3277000" />
+      <workItem from="1673263471012" duration="3820000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
