@@ -57,6 +57,7 @@ public class DeptServlet extends HttpServlet {
         }
         else {
 //            response.sendRedirect(request.getContextPath()+"/index.jsp");
+            // go to welcom page
             response.sendRedirect( request.getContextPath()+"/welcom");
         }
 
