@@ -38,6 +38,15 @@ public class UserServlet extends HttpServlet {
      */
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                String name = cookie.getName();
+                String value = cookie.getValue();
+            }
+
+        }
+
         String servletPath = request.getServletPath();
         if ("/user/login".equals(servletPath)){
             doLogin(request,response);
@@ -96,6 +105,22 @@ public class UserServlet extends HttpServlet {
         if (success){
             HttpSession httpSession = request.getSession();
             httpSession.setAttribute("username",username);
+
+            if ("1".equals(request.getParameter("auto_login"))){
+                Cookie cookie = new Cookie("username",username);
+                Cookie cookie_pwd = new Cookie("password",password);
+
+                cookie.setMaxAge(60 * 60 * 24 * 10);
+                cookie_pwd.setMaxAge(60 * 60 * 24 * 10);
+
+                cookie.setPath(request.getContextPath());
+                cookie_pwd.setPath(request.getContextPath());
+
+                response.addCookie(cookie);
+                response.addCookie(cookie_pwd);
+
+            }
+
             response.sendRedirect(request.getContextPath()+"/dept/list");
         }else {
             response.sendRedirect(request.getContextPath()+"/login_error.jsp");
