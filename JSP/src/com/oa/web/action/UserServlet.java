@@ -50,7 +50,7 @@ public class UserServlet extends HttpServlet {
 
         if (success){
             HttpSession httpSession = request.getSession();
-            httpSession.setAttribute("login_succ",new AdminUserBean(username,password));
+            httpSession.setAttribute("username",username);
             response.sendRedirect(request.getContextPath()+"/dept/list");
         }else {
             response.sendRedirect(request.getContextPath()+"/login_error.jsp");
