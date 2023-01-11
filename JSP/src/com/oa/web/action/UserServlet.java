@@ -49,8 +49,16 @@ public class UserServlet extends HttpServlet {
 
 
     protected void doExit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //destroy the session
+        HttpSession httpSession = request.getSession(false);
+        if (httpSession != null) {
+            // manual destroy the session
+            httpSession.invalidate();
 
-    
+            // redirect to login page
+            response.sendRedirect(request.getContextPath());
+        }
+
     }
 
 
