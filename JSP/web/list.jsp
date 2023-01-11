@@ -23,6 +23,7 @@
 
   <h1 align='center'>dept list</h1>
   <hr />
+  <a href="<%=request.getContextPath() %>/user/exit">[Safety logout]</a>
   <table border='1px' align='center' width='50%'>
     <tr>
       <th>serial_no</th>
