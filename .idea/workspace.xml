@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init" />
+    <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSP/src/com/oa/web/action/DeptServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/src/com/oa/web/action/DeptServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSP/src/com/oa/web/action/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/src/com/oa/web/action/UserServlet.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -766,6 +770,7 @@
       <workItem from="1673160685535" duration="13292000" />
       <workItem from="1673263471012" duration="3820000" />
       <workItem from="1673359905126" duration="82000" />
+      <workItem from="1673413371583" duration="1719000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
