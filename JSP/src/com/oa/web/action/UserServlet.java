@@ -13,11 +13,48 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@WebServlet(name = "UserServlet", value = "/user/login")
+@WebServlet(name = "UserServlet", value = {"/user/login","/user/exit"})
 public class UserServlet extends HttpServlet {
-
+    /**
+     * Receives standard HTTP requests from the public
+     * <code>service</code> method and dispatches
+     * them to the <code>do</code><i>Method</i> methods defined in
+     * this class. This method is an HTTP-specific version of the
+     * {@link Servlet#service} method. There's no
+     * need to override this method.
+     *
+     * @param request  the {@link HttpServletRequest} object that
+     *             contains the request the client made of
+     *             the servlet
+     * @param response the {@link HttpServletResponse} object that
+     *             contains the response the servlet returns
+     *             to the client
+     * @throws IOException      if an input or output error occurs
+     *                          while the servlet is handling the
+     *                          HTTP request
+     * @throws ServletException if the HTTP request
+     *                          cannot be handled
+     * @see Servlet#service
+     */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String servletPath = request.getServletPath();
+        if ("/user/login".equals(servletPath)){
+            doLogin(request,response);
+        }
+        else if("/user/exit".equals(servletPath)){
+            doExit(request,response);
+        }
+    }
+
+
+    protected void doExit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    
+    }
+
+
+    protected void doLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         boolean success = false;
