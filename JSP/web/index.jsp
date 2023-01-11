@@ -16,6 +16,7 @@
     <form action="<%=request.getContextPath()%>/user/login" method="post">
         username: <input type="text" name="username"><br>
         password: <input type="password" name="password"><br>
+        <input type="checkbox" name="auto_login" value="1">auto login after 10 days<br>
         <input type="submit" value="login">
     </form>
 
