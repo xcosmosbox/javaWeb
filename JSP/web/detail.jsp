@@ -7,16 +7,11 @@
     <title>Detail</title>
 </head>
 <body>
-    <h1>dept detail</h1>
-    <%
-        String  dept_no = (String) request.getAttribute("dept_no");
-        String  dept_name = (String) request.getAttribute("dept_name");
-        String  location = (String) request.getAttribute("location");
-    %>
+    <h1>${username}dept detail</h1>
     <hr/>
-    dept_no: <%=dept_no%> <br>
-    dept_name: <%=dept_name%> <br>
-    dept_location: <%=location%> <br>
+    dept_no: ${dept.deptno}<br>
+    dept_name: ${dept.dname} <br>
+    dept_location: ${dept.loc} <br>
 
     <input type='button' value='return' onclick='window.history.back()'/>
 
