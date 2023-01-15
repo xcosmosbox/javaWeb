@@ -10,7 +10,7 @@
 
     <h1>
         Failed!
-        <a href="javascript:void(0)" onclick="window.history.back()">Return</a>
+        <a href="${pageContext.request.contextPath}/index.jsp">Return</a>
     </h1>
 
 </body>
