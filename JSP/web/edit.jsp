@@ -13,10 +13,10 @@
 <%
   DeptWarpper deptWarpper = (DeptWarpper) request.getAttribute("wasEditEdpt");
 %>
-<form action='<%=request.getContextPath() %>/dept/modify' method='post'>
-  dept_no<input type='text' name='deptno' value='<%=deptWarpper.getDeptno()%>' readonly/><br>
-  dept_name<input type='text' name='dname' value='<%=deptWarpper.getDname()%>'/><br>
-  dept_location<input type='text' name='loc' value='<%=deptWarpper.getLoc()%>'/><br>
+<form action='${pageContext.request.contextPath}/dept/modify' method='post'>
+  dept_no<input type='text' name='deptno' value='${wasEditEdpt.deptno}' readonly/><br>
+  dept_name<input type='text' name='dname' value='${wasEditEdpt.dname}'/><br>
+  dept_location<input type='text' name='loc' value='${wasEditEdpt.loc}'/><br>
   <input type='submit' value='Update'/><br>
 </form>
 </body>
