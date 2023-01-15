@@ -207,9 +207,7 @@ public class DeptServlet extends HttpServlet {
             if (resultSet.next()){
                 String dname = resultSet.getString("dname");
                 String loc = resultSet.getString("loc");
-                request.setAttribute("dept_no",deptno);
-                request.setAttribute("dept_name",dname);
-                request.setAttribute("location",loc);
+                request.setAttribute("dept",new DeptWarpper(deptno,dname,loc));
 //                out.print("       dept_no: "+deptno+" <br>");
 //                out.print("       dept_name: "+dname+" <br>");
 //                out.print("       dept_location: "+loc+" <br>");
