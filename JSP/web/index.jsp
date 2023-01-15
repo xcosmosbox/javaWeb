@@ -13,7 +13,7 @@
 
     <h1>Login Page</h1>
     <hr>
-    <form action="<%=request.getContextPath()%>/user/login" method="post">
+    <form action="${pageContext.request.contextPath}/user/login" method="post">
         username: <input type="text" name="username"><br>
         password: <input type="password" name="password"><br>
         <input type="checkbox" name="auto_login" value="1">auto login after 10 days<br>
