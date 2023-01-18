@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="JSP:war exploded" />
+      <artifact name="Filter:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,14 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Filter_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Filter/Filter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Filter/src/com/javaweb/servlet/AServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Filter/src/com/javaweb/servlet/BServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Filter/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSP/JSP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/JSP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Filter/src/com/javaweb/servlet/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Filter/src/com/javaweb/servlet/MyFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Filter/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Filter/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +93,7 @@
       <recent name="com.oa.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.JSP">
+  <component name="RunManager" selected="Tomcat Server.Filter">
     <configuration name="ReflectAnnotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.javaWeb.servlet.ReflectAnnotation" />
       <module name="AnnotationDev" />
@@ -288,6 +283,94 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="AnnotationDev:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="Filter" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Filter" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="Filter:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Filter" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="713b4693-bab4-4a7d-b231-352e46539823" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49994" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Filter:war exploded" />
         </option>
       </method>
     </configuration>
@@ -737,6 +820,7 @@
     <list>
       <item itemvalue="Application.ReflectAnnotation" />
       <item itemvalue="Tomcat Server.JSP" />
+      <item itemvalue="Tomcat Server.Filter" />
       <item itemvalue="Tomcat Server.SessionTest" />
       <item itemvalue="Tomcat Server.OA" />
       <item itemvalue="Tomcat Server.Annotation_Dev" />
@@ -779,7 +863,7 @@
       <workItem from="1673706259603" duration="59000" />
       <workItem from="1673746379977" duration="4243000" />
       <workItem from="1673956945571" duration="1255000" />
-      <workItem from="1674000857759" duration="827000" />
+      <workItem from="1674000857759" duration="2512000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>
