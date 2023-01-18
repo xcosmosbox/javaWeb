@@ -10,9 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45fbe012-3028-4687-9f4f-0aa828970599" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/JSP/src/com/oa/web/filter/LoginFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Filter/src/com/javaweb/servlet/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Filter/src/com/javaweb/servlet/MyFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Filter/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Filter/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSP/JSP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/JSP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSP/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JSP/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel"
@@ -863,7 +864,7 @@
       <workItem from="1673706259603" duration="59000" />
       <workItem from="1673746379977" duration="4243000" />
       <workItem from="1673956945571" duration="1255000" />
-      <workItem from="1674000857759" duration="2512000" />
+      <workItem from="1674000857759" duration="3418000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1671841879749</created>

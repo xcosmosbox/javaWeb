@@ -7,5 +7,14 @@
         <welcome-file-list>
             <welcome-file>welcom</welcome-file>
         </welcome-file-list>
+
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.oa.web.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     
 </web-app>
