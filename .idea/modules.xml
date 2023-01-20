@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AJAX/AJAX.iml" filepath="$PROJECT_DIR$/AJAX/AJAX.iml" />
       <module fileurl="file://$PROJECT_DIR$/AnnotationDev/AnnotationDev.iml" filepath="$PROJECT_DIR$/AnnotationDev/AnnotationDev.iml" />
       <module fileurl="file://$PROJECT_DIR$/Filter/Filter.iml" filepath="$PROJECT_DIR$/Filter/Filter.iml" />
       <module fileurl="file://$PROJECT_DIR$/JSP/JSP.iml" filepath="$PROJECT_DIR$/JSP/JSP.iml" />
